@@ -2,6 +2,8 @@ import * as React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import DestinationApp from "./DestinationApp";
+import CrewApp from "./CrewApp";
+import TechApp from "./TechApp";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -17,7 +19,16 @@ const router = createBrowserRouter([
   },
   {
     path: "destination",
-    element: <Destination/>
+    element: <DestinationApp/>
+  },
+  
+  {
+    path: "crew",
+    element: < CrewApp/>
+  },
+  {
+    path: "technology",
+    element: < TechApp/>
   },
   
 ]);
