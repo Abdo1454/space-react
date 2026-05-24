@@ -118,7 +118,7 @@
 
 .page-content h2 {
   text-align: center;
-  
+
   color: white;
   font-size: 28px;
   font-weight: 300;
@@ -224,7 +224,8 @@ justify-content: flex-end;
   font-weight: 500;
   letter-spacing: 2px;
 }
-/* ************************************crew-content************************************* */
+/* 
+************************************crew-content************************************* */
 .crew-content {
   background: url(../assets/crew/background-crew-desktop.jpg);
   background-size: cover;
@@ -307,7 +308,7 @@ justify-content: flex-end;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 400px 0px 0px;
+  /* padding: 100px 400px 0px 0px; */
   gap: 20px;
   margin-top: 30px;
 }
@@ -384,4 +385,23 @@ justify-content: flex-end;
   #name-destination {
     font-size: 70px;
   }
+.content-3 {
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+
+  gap: 20px;
+}
+
+.page-content-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.crew-image img {
+  width: 100%;
+  max-width: 400px;
+  max-height: 450px;
+}
 }
