@@ -26,7 +26,7 @@ function Destination() {
 
       <div className="page-content">
         <h2 id="destination-title">
-          01 PICK YOUR DESTINATION
+         <span> 01 </span> PICK YOUR DESTINATION
         </h2>
 
         <div className="content-2">
