@@ -1,35 +1,87 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div>
-      <nav className="navbar">
-        <div className="logo">
-          <img src="assets/shared/logo.svg" alt="logo" />
-        </div>
+    <nav className="navbar">
 
-        <hr className="nav-hr" />
+      {/* logo */}
+      <div className="logo">
+        <img
+          src="/assets/shared/logo.svg"
+          alt="logo"
+        />
+      </div>
 
-        <ul className="nav-links">
-          <li>
-            <Link to="/">00 Home</Link>
-          </li>
+      {/* hamburger menu */}
+      <div
+        className="menu-icon"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-          <li>
-            <Link to="/destination">01 Destination</Link>
-          </li>
+      {/* line */}
+      <hr className="nav-hr" />
 
-          <li>
-            <Link to="/crew">02 Crew</Link>
-          </li>
+      {/* nav links */}
+      <ul className={`nav-links ${menuOpen ? "show-menu" : ""}`}>
 
-          <li>
-            <Link to="/technology">03 Technology</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "active-link" : ""
+            }
+            onClick={() => setMenuOpen(false)}
+          >
+            00 Home
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/destination"
+            className={({ isActive }) =>
+              isActive ? "active-link" : ""
+            }
+            onClick={() => setMenuOpen(false)}
+          >
+            01 Destination
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/crew"
+            className={({ isActive }) =>
+              isActive ? "active-link" : ""
+            }
+            onClick={() => setMenuOpen(false)}
+          >
+            02 Crew
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/technology"
+            className={({ isActive }) =>
+              isActive ? "active-link" : ""
+            }
+            onClick={() => setMenuOpen(false)}
+          >
+            03 Technology
+          </NavLink>
+        </li>
+
+      </ul>
+    </nav>
   );
 }
 
