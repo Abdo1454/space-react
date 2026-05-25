@@ -4,33 +4,26 @@ import App from "./App";
 import DestinationApp from "./DestinationApp";
 import CrewApp from "./CrewApp";
 import TechApp from "./TechApp";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
-import Destination from "./Destination/Destination";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
+    element: <App />,
   },
   {
-    path: "destination",
-    element: <DestinationApp/>
-  },
-  
-  {
-    path: "crew",
-    element: < CrewApp/>
+    path: "/destination",
+    element: <DestinationApp />,
   },
   {
-    path: "technology",
-    element: < TechApp/>
+    path: "/crew",
+    element: <CrewApp />,
   },
-  
+  {
+    path: "/technology",
+    element: <TechApp />,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
